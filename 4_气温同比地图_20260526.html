@@ -62,7 +62,7 @@
 </head>
 <body>
 <a class="back" href="index.html">← 返回菜单</a>
-<div class="time">同步时间：2026-05-26 17:35:35</div>
+<div class="time">同步时间：2026-05-26 17:41:05</div>
 <div class="tab-bar">
   <button class="tab-btn active" data-key="avg">🌡️ 平均温</button>
   <button class="tab-btn" data-key="max">🔥 最高温</button>
@@ -91,7 +91,7 @@ var COLOR_RANGE = ["#313695","#4575B4","#74ADD1","#ABD9E9","#E0F3F8","#FFFFBF","
 var curMetric = "avg", curDayIdx = 0, playing = false, timer = null;
 
 function init() {
-  fetch("https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json")
+  fetch("https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/json/china.json")
     .then(function(r) { return r.json(); })
     .then(function(j) {
       echarts.registerMap("china", j);
